@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>簡轉繁 繁轉簡</title>
+<script type="text/javascript" src="gbkbig5.js"></script>
+<style type="text/css">
+
+* {
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto;	
+}
+	
+textarea {
+ 	display:block;
+    	width: 95%;
+	box-sizing: border-box;
+	height: 300px;
+	border: 1px solid #E1E100;
+	background: #F5FFFA;
+	  margin-left:auto;
+ 	 margin-right:auto;
+}
+input[type="button"] , input[type="submit"] , input[type="reset"] {
+	border: 2px solid;
+	border-radius: 3px;
+	background: #FFF8C5;
+	height: 30px;
+	color: #009900;
+	padding: 0 10px;
+	cursor: pointer;
+	border-color: #FF9D6F #FDB939 #FDB939 #FF9D6F;
+	font-size: 16px;
+}
+.rightme {
+	text-align: left;
+}
+.tops{
+	
+	float:right;
+}
+	
+</style>
+</head>
+
+<body>
+<form name="biggbks">
+    <!--input value="轉換編碼" onclick="char2ncr()" class="downs" type="button">
+    <input value="編碼翻譯" onclick="ncr2char()" class="downs" type="button"-->
+	<div class="tops">
+    		<input onclick="s2t()" value="轉換繁體" class="downs" type="button">
+    		<input onclick="t2s()" value="轉換簡體" class="downs" type="button">
+	</div>
+    <textarea name="text" id="text" rows="" cols="" onkeyup="changeText(this);"></textarea>
+	<div class="tops">
+	<!--input value="復原" onclick="undo()" type="button"-->
+    	<input onclick="blank()" value="清除" type="button">
+	<input value="複製" onclick="document.getElementById('text').focus();document.getElementById('text').select();document.execCommand('copy')" type="button">
+	</div>
+	<div class="rightme">
+	 總共有：<span id="textCount" class="star">0</span> 字
+	</div>
+  </form>
+
+</body>
+
+</html> 
